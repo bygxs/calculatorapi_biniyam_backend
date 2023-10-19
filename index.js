@@ -24,6 +24,14 @@ app.post("/calculate", (req, res) => {
   else if (operation === "pythagoras") {
     // Perform Pythagoras calculation
     result = Math.sqrt(Math.pow(firstNumber, 2) + Math.pow(secondNumber, 2));
+  } else if (operation === "cylinderVolume") {
+    // Perform cylinder volume calculation (πr^2h)
+    result = Math.PI * Math.pow(firstNumber, 2) * secondNumber;
+  } else if (operation === "circleArea") {
+    result = Math.PI * Math.pow(firstNumber, 2);
+} else if (operation === "squareRoot") {
+    // Perform square root calculation
+    result = Math.sqrt(firstNumber);
 
   }else if (operation === "division") {
     if (secondNumber !== 0) {
