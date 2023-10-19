@@ -17,7 +17,12 @@ app.post("/calculate", (req, res) => {
     result = firstNumber - secondNumber;
   } else if (operation === "multiplication") {
     result = firstNumber * secondNumber;
-  } else if (operation === "division") {
+  } else if (operation === "percentage") {
+    // Perform percentage calculation
+    result = (firstNumber / 100) * secondNumber;
+  }
+  
+  else if (operation === "division") {
     if (secondNumber !== 0) {
       result = firstNumber / secondNumber;
     } else {
@@ -25,7 +30,8 @@ app.post("/calculate", (req, res) => {
     }
   } else {
     return res.status(400).send("Invalid operation.");
-  }
+  } 
+  
 
   res.send(result.toString());
 });
