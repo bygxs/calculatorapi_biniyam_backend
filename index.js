@@ -21,8 +21,11 @@ app.post("/calculate", (req, res) => {
     // Perform percentage calculation
     result = (firstNumber / 100) * secondNumber;
   }
-  
-  else if (operation === "division") {
+  else if (operation === "pythagoras") {
+    // Perform Pythagoras calculation
+    result = Math.sqrt(Math.pow(firstNumber, 2) + Math.pow(secondNumber, 2));
+
+  }else if (operation === "division") {
     if (secondNumber !== 0) {
       result = firstNumber / secondNumber;
     } else {
